@@ -1,0 +1,16 @@
+ropsten
+0x24e7e143a8474300b2ff599ebcc4044c89b15c49
+
+address rule
+http://www.blockbook.tech/tx_sender?q1=true
+http://www.blockbook.tech/tx_sender?q1=false
+http://www.blockbook.tech/tx_sender?q2=true
+http://www.blockbook.tech/tx_sender?q2=false
+http://www.blockbook.tech/tx_sender?q3=true
+http://www.blockbook.tech/tx_sender?q3=false
+http://www.blockbook.tech/tx_sender?q4=true
+http://www.blockbook.tech/tx_sender?q4=false
+
+http://www.blockbook.tech/tx_sender?sendanswer=
+
+

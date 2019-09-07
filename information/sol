@@ -1,0 +1,51 @@
+pragma solidity ^0.5.10;
+
+import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
+
+
+contract CertToken_721 is ERC721Full {
+    mapping (address => bool)[4 + 1] private questions;
+    bool Q1 = false;
+    bool Q2 = true;
+    bool Q3 = false;
+    bool Q4 = true;
+    
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+
+    constructor() ERC721Full("CertToken", "CERT") public {}
+
+    function setAnswer( uint q_number , bool my_ans ) public {
+        questions[q_number][msg.sender] = my_ans;
+    }
+
+    function getAnswer( uint q_number ) public view returns (bool) {
+        return questions[q_number][msg.sender] ;
+    }
+
+//test
+    function getTrue() public view returns (bool){
+        return true;
+    }
+
+
+    function challangeCertification() public returns (string memory) {
+        if ( Q1 == questions[1][msg.sender] && Q2 == questions[2][msg.sender] && Q3 == questions[3][msg.sender] && Q4 == questions[4][msg.sender]) {
+            _tokenIds.increment();
+            uint256 newItemId = _tokenIds.current();
+            super._mint( msg.sender , newItemId);
+
+            return "perfect! you got certificate token";
+        } else {
+            return "your answer is not good";
+        }
+    }
+    
+    //token transfer is forbidden.
+    function transferFrom(address from, address to, uint256 tokenId) public {}
+    function safeTransferFrom(address from, address to, uint256 tokenId) public {}
+    function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory _data) public {}
+}
+
+
+
