@@ -1,5 +1,5 @@
 //環境設定
-var Address = "0x24e7e143a8474300b2ff599ebcc4044c89b15c49";
+var Address = "0xB550B8CbaCa87C7660066091960cBb058e32775a";
 
 //metamaskの準備
 web3js = new Web3(web3.currentProvider);	

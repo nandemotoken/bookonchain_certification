@@ -224,20 +224,6 @@ var ABI = [
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "getTrue",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "symbol",
 		"outputs": [
 			{
