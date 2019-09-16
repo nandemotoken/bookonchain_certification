@@ -49,6 +49,7 @@ function getAnswer4( hiki ){
 
 //addr = web3js.eth.getAccounts().then(console.log);
 
+console.log("my answer is ")
 web3js.eth.getAccounts().then( getAnswer1 );
 web3js.eth.getAccounts().then( getAnswer2 );
 web3js.eth.getAccounts().then( getAnswer3 );
